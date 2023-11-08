@@ -36,6 +36,6 @@ Raise an Exception
 
 def test_file_not_founf():
     file = "/Users/dangullis/Desktop/Projects/single_function_program_design_challenge/file_threee.py"
-    with pytest.raises(Exception) as e:
+    with pytest.raises(FileNotFoundError) as e:
         check_for_tasks(file)
-        assert str(e.value) == "file not found!"
+        assert str(e.value) == "File not found!"

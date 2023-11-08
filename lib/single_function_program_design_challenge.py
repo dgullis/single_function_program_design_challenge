@@ -1,13 +1,13 @@
 import os.path
 
 
-def check_for_tasks(file):
+def check_for_tasks(file_path):
     
     #check if given file exists
-    if os.path.isfile(file):
+    if os.path.isfile(file_path):
 
         #if file exists open file in read only as 'contents'
-        with open(file, 'r') as contents:
+        with open(file_path, 'r') as contents:
             # extract contents of file line by line
             lines = contents.readlines()
         
@@ -18,7 +18,7 @@ def check_for_tasks(file):
         tasks_stripped = [task.strip("\n").strip("#TODO ") for task in raw_tasks]
 
         # check to see if any tasks have been found
-        if len(tasks_stripped) == 0:
+        if not tasks_stripped:
 
             # treturn appropriate string if none found
             return "No tasks found."
@@ -27,5 +27,5 @@ def check_for_tasks(file):
             return ", ".join(tasks_stripped)
     else:
         # if file was not found return an exception statement to explain this
-        raise Exception("file not found!")
+        raise FileNotFoundError("File not found!")
     
