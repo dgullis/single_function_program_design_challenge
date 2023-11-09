@@ -1,6 +1,6 @@
 ### Hello!
 
-This challenge focused on TDD and programme deisgn.
+This challenge focused on TDD and program deisgn.
 
 The brief was to create a programme 'recipe' for a given short user brief. 
 This recipe was then used to write tests for my proposed function. 
@@ -10,4 +10,4 @@ After all tests were working the code was refactored to make it more readable an
 
 Pytest can be ran from within the main folder.
 
-The programme recipe (recipe.md) can be found in the main folder.
+The program recipe (recipe.md) can be found in the main folder.
